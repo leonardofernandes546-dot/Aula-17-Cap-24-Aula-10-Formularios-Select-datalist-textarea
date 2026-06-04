@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício Formulário</title>
+</head>
+
+<body>
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <p>
+                <label for="nome">Nome completo:</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+            </p>
+
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+            </p>
+
+            <p>
+                <label for="telefone">Telefone (formato (XX)XXXXX-XXXX):</label><br>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11)91234-5678">
+            </p>
+
+            <p>
+                <label for="senha">Crie uma senha:</label><br>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+            </p>
+
+            <p>
+                <label for="idade">Idade:</label><br>
+                <input type="text" id="idade" name="idade" placeholder="Sua idade">
+            </p>
+
+            <p>
+                <label for="estado">Estado de entrega:</label><br>
+                <select id="estado" name="estado">
+                    <option value="">--Selecione seu estado--</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="cnh">Envie uma foto da sua CNH:</label><br>
+                <input type="file" id="cnh" name="cnh">
+            </p>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Escolha do Carro</legend>
+
+            <p>
+                <label>Escolha o modelo:</label><br>
+                <input type="checkbox" id="byd-seal" name="modelo" value="byd-seal">
+                <label for="byd-seal">BYD Seal</label><br>
+
+                <input type="checkbox" id="byd-han" name="modelo" value="byd-han">
+                <label for="byd-han">BYD Han</label><br>
+
+                <input type="checkbox" id="byd-song-plus" name="modelo" value="byd-song-plus">
+                <label for="byd-song-plus">BYD Song Plus</label>
+            </p>
+
+            <p>
+                <label>Itens adicionais:</label><br>
+                <input type="checkbox" id="som-premium" name="adicionais" value="som-premium">
+                <label for="som-premium">Som Premium</label><br>
+
+                <input type="checkbox" id="ar-digital" name="adicionais" value="ar-digital">
+                <label for="ar-digital">Ar-condicionado Digital</label><br>
+
+                <input type="checkbox" id="camera-360" name="adicionais" value="camera-360">
+                <label for="camera-360">Câmera 360°</label>
+            </p>
+
+            <p>
+                <label for="cor">Cor do carro:</label><br>
+                <input type="color" id="cor" name="cor" value="#000000">
+            </p>
+
+            <p>
+                <label for="brilho">Intensidade da cor (brilho):</label><br>
+                <input type="range" id="brilho" name="brilho" min="0" max="100">
+            </p>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Entrega</legend>
+
+            <p>
+                <label for="data-entrega">Data desejada para entrega:</label><br>
+                <input type="date" id="data-entrega" name="data_entrega" placeholder="dd/mm/aaaa">
+            </p>
+
+            <p>
+                <label for="hora-entrega">Hora preferida para entrega:</label><br>
+                <input type="time" id="hora-entrega" name="hora_entrega">
+            </p>
+
+            <p>
+                <label for="mes-compra">Mês da compra:</label><br>
+                <input type="month" id="mes-compra" name="mes_compra"> <span>de</span>
+            </p>
+
+            <p>
+                <label for="expectativa">Conte qual é a sua expectativa sobre o carro:</label><br>
+                <textarea id="expectativa" name="expectativa" rows="4" cols="40"
+                    placeholder="Exemplo: Espero que o carro tenha boa autonomia, seja confortável, silencioso e impressione os vizinhos!"></textarea>
+            </p>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Avaliação dos Modelos BYD</legend>
+
+            <p>
+                <label for="aval-dolphin">Avalie o BYD Dolphin Plus:</label><br>
+                <input type="text" id="aval-dolphin" name="aval_dolphin" placeholder="0 a 5 es">
+            </p>
+
+            <p>
+                <label for="aval-gs">Avalie o BYD GS:</label><br>
+                <input type="text" id="aval-gs" name="aval_gs" placeholder="0 a 5 es">
+            </p>
+
+            <p>
+                <label for="aval-mini">Avalie o BYD Mini:</label><br>
+                <input type="text" id="aval-mini" name="aval_mini" placeholder="0 a 5 es">
+            </p>
+        </fieldset>
+
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+
+</body>
+
+</html>
