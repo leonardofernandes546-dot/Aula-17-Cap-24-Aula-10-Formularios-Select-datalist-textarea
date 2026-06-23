@@ -10,7 +10,6 @@
 
     <form action="#" method="POST" enctype="multipart/form-data">
 
-
         <fieldset>
             <legend>Dados Pessoais</legend>
 
@@ -21,12 +20,18 @@
 
             <p>
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+                <input type="email" id="email" name="email" list="provedores" placeholder="seuemail@gmail.com">
+                <datalist id="provedores">
+                    <option value="@gmail.com">
+                    <option value="@outlook.com">
+                    <option value="@hotmail.com">
+                    <option value="@yahoo.com.br">
+                </datalist>
             </p>
 
             <p>
                 <label for="telefone">Telefone (formato (XX)XXXXX-XXXX):</label><br>
-                <input type="tel" id="telefone" name="telefone" placeholder="(11)91234-5678">
+                <input type="number" id="telefone" name="telefone" placeholder="(11)91234-5678">
             </p>
 
             <p>
@@ -36,16 +41,40 @@
 
             <p>
                 <label for="idade">Idade:</label><br>
-                <input type="text" id="idade" name="idade" placeholder="Sua idade">
+                <input type="number" id="idade" name="idade" placeholder="Sua idade" min="1" max="100">
             </p>
 
             <p>
                 <label for="estado">Estado de entrega:</label><br>
                 <select id="estado" name="estado">
                     <option value="">--Selecione seu estado--</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
                     <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
                 </select>
             </p>
 
@@ -55,19 +84,18 @@
             </p>
         </fieldset>
 
-
         <fieldset>
             <legend>Escolha do Carro</legend>
 
             <p>
                 <label>Escolha o modelo:</label><br>
-                <input type="checkbox" id="byd-seal" name="modelo" value="byd-seal">
+                <input type="radio" id="byd-seal" name="modelo" value="byd-seal">
                 <label for="byd-seal">BYD Seal</label><br>
 
-                <input type="checkbox" id="byd-han" name="modelo" value="byd-han">
+                <input type="radio" id="byd-han" name="modelo" value="byd-han">
                 <label for="byd-han">BYD Han</label><br>
 
-                <input type="checkbox" id="byd-song-plus" name="modelo" value="byd-song-plus">
+                <input type="radio" id="byd-song-plus" name="modelo" value="byd-song-plus">
                 <label for="byd-song-plus">BYD Song Plus</label>
             </p>
 
@@ -94,13 +122,12 @@
             </p>
         </fieldset>
 
-
         <fieldset>
             <legend>Entrega</legend>
 
             <p>
                 <label for="data-entrega">Data desejada para entrega:</label><br>
-                <input type="date" id="data-entrega" name="data_entrega" placeholder="dd/mm/aaaa">
+                <input type="date" id="data-entrega" name="data_entrega">
             </p>
 
             <p>
@@ -110,7 +137,7 @@
 
             <p>
                 <label for="mes-compra">Mês da compra:</label><br>
-                <input type="month" id="mes-compra" name="mes_compra"> <span>de</span>
+                <input type="month" id="mes-compra" name="mes_compra">
             </p>
 
             <p>
@@ -120,26 +147,24 @@
             </p>
         </fieldset>
 
-
         <fieldset>
             <legend>Avaliação dos Modelos BYD</legend>
 
             <p>
-                <label for="aval-dolphin">Avalie o BYD Dolphin Plus:</label><br>
-                <input type="text" id="aval-dolphin" name="aval_dolphin" placeholder="0 a 5 es">
+                <label for="aval-dolphin">Avalie o BYD Dolphin Plus (0 a 5):</label><br>
+                <input type="number" id="aval-dolphin" name="aval_dolphin" placeholder="0 a 5" min="0" max="5">
             </p>
 
             <p>
-                <label for="aval-gs">Avalie o BYD GS:</label><br>
-                <input type="text" id="aval-gs" name="aval_gs" placeholder="0 a 5 es">
+                <label for="aval-gs">Avalie o BYD GS (0 a 5):</label><br>
+                <input type="number" id="aval-gs" name="aval_gs" placeholder="0 a 5" min="0" max="5">
             </p>
 
             <p>
-                <label for="aval-mini">Avalie o BYD Mini:</label><br>
-                <input type="text" id="aval-mini" name="aval_mini" placeholder="0 a 5 es">
+                <label for="aval-mini">Avalie o BYD Mini (0 a 5):</label><br>
+                <input type="number" id="aval-mini" name="aval_mini" placeholder="0 a 5" min="0" max="5">
             </p>
         </fieldset>
-
 
         <p>
             <input type="submit" value="Enviar">
