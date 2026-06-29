@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -10,33 +10,30 @@
 
     <form action="#" method="POST" enctype="multipart/form-data">
 
+    
         <fieldset>
             <legend>Dados Pessoais</legend>
 
             <p>
                 <label for="nome">Nome completo:</label><br>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
             </p>
 
             <p>
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" list="provedores" placeholder="seuemail@gmail.com">
-                <datalist id="provedores">
-                    <option value="@gmail.com">
-                    <option value="@outlook.com">
-                    <option value="@hotmail.com">
-                    <option value="@yahoo.com.br">
-                </datalist>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
             </p>
 
             <p>
-                <label for="telefone">Telefone (formato (XX)XXXXX-XXXX):</label><br>
-                <input type="number" id="telefone" name="telefone" placeholder="(11)91234-5678">
+       <p>
+    <label for="telefone">Telefone Formato (xx) xxxxx-xxxx:</label><br>
+    <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" required>
+</p>
             </p>
 
             <p>
                 <label for="senha">Crie uma senha:</label><br>
-                <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
             </p>
 
             <p>
@@ -47,7 +44,6 @@
             <p>
                 <label for="estado">Estado de entrega:</label><br>
                 <select id="estado" name="estado">
-                    <option value="">--Selecione seu estado--</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -84,6 +80,7 @@
             </p>
         </fieldset>
 
+        
         <fieldset>
             <legend>Escolha do Carro</legend>
 
@@ -122,12 +119,13 @@
             </p>
         </fieldset>
 
+        
         <fieldset>
             <legend>Entrega</legend>
 
             <p>
                 <label for="data-entrega">Data desejada para entrega:</label><br>
-                <input type="date" id="data-entrega" name="data_entrega">
+                <input type="date" id="data-entrega" name="data_entrega" placeholder="dd/mm/aaaa">
             </p>
 
             <p>
@@ -137,7 +135,7 @@
 
             <p>
                 <label for="mes-compra">Mês da compra:</label><br>
-                <input type="month" id="mes-compra" name="mes_compra">
+                <input type="month" id="mes-compra" name="mes_compra"> <span>de</span>
             </p>
 
             <p>
@@ -147,32 +145,33 @@
             </p>
         </fieldset>
 
+        
         <fieldset>
             <legend>Avaliação dos Modelos BYD</legend>
 
             <p>
-                <label for="aval-dolphin">Avalie o BYD Dolphin Plus (0 a 5):</label><br>
-                <input type="number" id="aval-dolphin" name="aval_dolphin" placeholder="0 a 5" min="0" max="5">
+                <label for="aval-dolphin">Avalie o BYD Dolphin Plus:</label><br>
+                <input type="number" id="aval-dolphin" name="aval_dolphin" placeholder="0 a 5 " min="0" max="5">
             </p>
 
             <p>
-                <label for="aval-gs">Avalie o BYD GS (0 a 5):</label><br>
-                <input type="number" id="aval-gs" name="aval_gs" placeholder="0 a 5" min="0" max="5">
+                <label for="aval-gs">Avalie o BYD GS:</label><br>
+                <input type="number" id="aval-gs" name="aval_gs" placeholder="0 a 5 " min="0" max="5">
             </p>
 
             <p>
-                <label for="aval-mini">Avalie o BYD Mini (0 a 5):</label><br>
-                <input type="number" id="aval-mini" name="aval_mini" placeholder="0 a 5" min="0" max="5">
+                <label for="aval-mini">Avalie o BYD Mini:</label><br>
+                <input type="number" id="aval-mini" name="aval_mini" placeholder="0 a 5 " min="0" max="5">
             </p>
         </fieldset>
 
+        
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
         </p>
 
     </form>
-
-</body>
+    </body>
 
 </html>
